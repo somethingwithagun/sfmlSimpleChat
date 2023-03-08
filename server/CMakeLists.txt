@@ -1,0 +1,7 @@
+﻿cmake_minimum_required(VERSION 3.14)
+project(server)
+set(SFML_DIR D:/libs/sfml-2.5.1-gcc)
+include_directories(server include)
+add_executable(server src/main.cpp src/chatServer.cpp)
+find_package(SFML COMPONENTS system window graphics network audio REQUIRED)
+target_link_libraries(server sfml-system sfml-window sfml-graphics sfml-network sfml-audio)

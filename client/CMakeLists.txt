@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.14)
+project(client)
+# set(CMAKE_CXX_FLAGS -g)
+set(SFML_DIR D:/libs/sfml-2.5.1-gcc)
+include_directories(client include/)
+add_executable(client src/main.cpp src/chatClient.cpp)
+find_package(SFML COMPONENTS system window graphics network audio REQUIRED)
+target_link_libraries(client sfml-system sfml-window sfml-graphics sfml-network sfml-audio)
